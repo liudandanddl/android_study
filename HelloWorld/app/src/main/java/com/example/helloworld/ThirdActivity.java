@@ -15,7 +15,7 @@ public class ThirdActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+//        super.onBackPressed();
         Intent intent1 = new Intent();
         intent1.putExtra("data_return", "hello FirstActivity");
         setResult(RESULT_OK, intent1);
