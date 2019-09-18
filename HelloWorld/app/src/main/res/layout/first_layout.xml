@@ -40,4 +40,11 @@ android:text指定了元素中显示的文字内容。
         android:id="@+id/button_4"
         android:text="liulanqi_2"/>
 
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button_5"
+        />
+
 </LinearLayout>

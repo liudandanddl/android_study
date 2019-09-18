@@ -113,37 +113,38 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-//        Button button_t = (Button) findViewById(R.id.button_th);
-//        button_t.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(FirstActivity.this, ThirdActivity.class);
-////              这里使用startActivityForResult启动ThirdActivity，请求码只要是一个唯一的值就可以，这里传入了1.
-//                startActivityForResult(intent, 1);
-//            }
-//        });
+
+        Button button_t = (Button) findViewById(R.id.button_5);
+        button_t.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FirstActivity.this, ThirdActivity.class);
+//              这里使用startActivityForResult启动ThirdActivity，请求码只要是一个唯一的值就可以，这里传入了1.
+                startActivityForResult(intent, 1);
+            }
+        });
 
     }
 
-//    /**
-//     * Dispatch incoming result to the correct fragment.
-//     *
-//     * @param requestCode
-//     * @param resultCode
-//     * @param data
-//     */
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        switch (requestCode){
-//            case 1:
-//                if (resultCode == RESULT_OK) {
-//                    String reData = data.getStringExtra("data_return");
-//                    Log.d("HelloWorldActivity", reData);
-//                }
-//                break;
-//
-//        }
-//    }
+    /**
+     * .由于在一个活动中有可能调用startActivityForResult方法去启动很多不同的活动，每一个活动返回的数据都会调到onActivityResult这个方法，
+     * 因此首先要检查requestCode的值来判断数据来源，确定数据是从ThirdActivity返回的之后，再通过resultCode来判断处理结果是否成功。
+     *
+     * @param requestCode 即我们在启动活动时传入的请求码
+     * @param resultCode 即我们在返回数据时传入的处理结果
+     * @param data 携带着返回数据的Intent
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    String reData = data.getStringExtra("data_return");
+                    Log.d("HelloWorldActivity", reData);
+                }
+                break;
+        }
+    }
 }
 
