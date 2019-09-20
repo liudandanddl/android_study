@@ -124,6 +124,15 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
+        Button button6 = (Button) findViewById(R.id.button_6);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, UIActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     /**

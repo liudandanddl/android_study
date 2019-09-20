@@ -47,4 +47,12 @@ android:text指定了元素中显示的文字内容。
         android:text="Button_5"
         />
 
+    <Button
+    android:id="@+id/button_6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="To_UiActivity"
+    android:textAllCaps="false"
+    />
+
 </LinearLayout>
