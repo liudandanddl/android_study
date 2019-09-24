@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/title" />
+<!--    include 自定义的公共布局-->
+<!--    <include layout="@layout/title" />-->
+<!--    添加自定义控件和添加普通控件的方式基本一样，只不过在添加自定义控件的时候需要指明控件的完整包名-->
+
+<!--    <com.example.helloworld.TitleLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view" />
 
 </LinearLayout>
