@@ -1,5 +1,7 @@
 package com.example.helloworld;
-
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActionBar;
@@ -63,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
 //        listView.setAdapter(adapter);
 
         initFruits(); // 初始化数据
+
+/*      //使用ListView
         FruitAdapter adapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
@@ -76,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+*/
+
+//使用RecyclerView
+        RecyclerView recyclerView = findViewById(R.id.recycle_view);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);  // 使用的是线性布局的方式
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL); // 该方法来设置布局的排列方式，默认是纵向排列的，传入LinearLayoutManager.HORIZONTAL表示让布局横向滚动。
+        recyclerView.setLayoutManager(layoutManager);  // layoutManager用于指定RecyclerView的布局方式
+        RecycleFruitAdapter adapter = new RecycleFruitAdapter(fruitList);  // 建立RecyclerView和数据之间的关联
+        recyclerView.setAdapter(adapter);
 
     }
 }

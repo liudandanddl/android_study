@@ -11,9 +11,16 @@
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content" />-->
 
-    <ListView
+<!--    使用ListView-->
+<!--    <ListView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/list_view" />-->
+
+<!--    使用RecyclerView实现和使用ListView同样的功能-->
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/list_view" />
+        android:id="@+id/recycle_view" />
 
 </LinearLayout>
