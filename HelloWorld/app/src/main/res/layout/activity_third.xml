@@ -7,11 +7,11 @@
 
     tools:context=".ThirdActivity" >
 
-    <Button
-        android:id="@+id/button_th"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button_third"
-        />
+  <Button
+      android:id="@+id/button_th"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Button_third"
+      />
 
 </RelativeLayout>

@@ -14,6 +14,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class BroadcastMainActivity extends AppCompatActivity {
@@ -31,6 +33,17 @@ public class BroadcastMainActivity extends AppCompatActivity {
         networkChangeReceiver = new NetworkChangeReceiver();
         // networkChangeReceiver会受到所有值为android.net.conn.CONNECTIVITY_CHANGE的广播
         registerReceiver(networkChangeReceiver, intentFilter);  // 调用registerReceiver方法进行注册。
+
+
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 使用button发送广播
+                Intent intent = new Intent("com.example.helloworld.broadcasttest.MY_BROADCAST");
+                sendBroadcast(intent);
+            }
+        });
 
     }
 
