@@ -27,6 +27,8 @@ public class BroadcastMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast_main);
+
+        // 创建动态广播接收器
         intentFilter = new IntentFilter();  // 创建一个intent的实例，广播接收器想要监听什么广播，就在这里添加相应的action
         // 当网络状态发生变化时，系统发出的正是一条值为android.net.conn.CONNECTIVITY_CHANGE的广播
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
@@ -39,7 +41,7 @@ public class BroadcastMainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 使用button发送广播
+                // 使用button发送自定义的标准广播
                 Intent intent = new Intent("com.example.helloworld.broadcasttest.MY_BROADCAST");
                 sendBroadcast(intent);
             }
