@@ -20,7 +20,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             "category_code integer)";
 
     private Context mcontext;
-
     
     /*
     构造函数：
