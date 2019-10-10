@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example.helloworld.database;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.helloworld.R;
+import com.example.helloworld.database.MyDatabaseHelper;
 
 public class MyDatabaseMainActivity extends AppCompatActivity {
 

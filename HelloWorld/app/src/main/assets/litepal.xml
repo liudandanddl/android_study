@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litpal>
+    <dbname value="BookStore" ></dbname>   <!-- 数据库名字 -->
+    <version value="4"></version>   <!-- 数据库版本号 -->
+
+<!--    list标签用于指定所有映射模型-->
+    <list>
+        <mapping class="com.example.helloworld.database.Book" />  <!-- 配置的映射模型类，使用完整的类名 -->
+        <mapping class="com.example.helloworld.database.Category" />
+    </list>
+</litpal>
